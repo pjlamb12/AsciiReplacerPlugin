@@ -4,7 +4,7 @@
 		"children":
 		[
 			{"id": "wrap"},
-			{"command": "ascii_kicker"}
+			{"command": "ascii_replacer"}
 		]
 	},
 ]
