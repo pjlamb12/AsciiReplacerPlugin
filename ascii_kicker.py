@@ -1,6 +1,6 @@
 import sublime, sublime_plugin, string
 
-class AsciiKickerCommand(sublime_plugin.TextCommand):
+class AsciiReplacerCommand(sublime_plugin.TextCommand):
 	
 	def run(self, edit):
 		for r in reversed(self.view.sel()):
@@ -15,5 +15,5 @@ class AsciiKickerCommand(sublime_plugin.TextCommand):
 				text = text.replace('% ', '&#37; ')
 				text = text.replace('…', '&#8230;')
 				self.view.replace(edit, line_r, text)
-		self.view.erase_status('ascii_kicker')
-		sublime.status_message('Ascii Kicker is finished running!')
+		self.view.erase_status('ascii_replacer')
+		sublime.status_message('Ascii Replacer is finished running!')
