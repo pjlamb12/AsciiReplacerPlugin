@@ -9,6 +9,8 @@ class AsciiReplacerCommand(sublime_plugin.TextCommand):
 				print(text)
 				text = text.replace('& ', '&amp; ')
 				text = text.replace('©', '&copy;')
+				text = text.replace('™', '&trade;')
+				text = text.replace('®', '&reg;')
 				text = text.replace("‘", "'")
 				text = text.replace("’", "'")
 				text = text.replace('“', '"')
