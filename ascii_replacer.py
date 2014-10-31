@@ -1,7 +1,7 @@
 import sublime, sublime_plugin, string
 
 class AsciiReplacerCommand(sublime_plugin.TextCommand):
-	
+
 	def run(self, edit):
 		for r in reversed(self.view.sel()):
 			for line_r in reversed(self.view.lines(r)):
@@ -18,6 +18,7 @@ class AsciiReplacerCommand(sublime_plugin.TextCommand):
 				text = text.replace('…', '&#8230;')
 				text = text.replace(' ', ' ')
 				text = text.replace('', '')
+				text = text.replace(' ', '')
 				text = text.replace('Á', '&#193;')
 				text = text.replace('á', '&#225;')
 				text = text.replace('É', '&#201;')
