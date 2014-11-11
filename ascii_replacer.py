@@ -16,6 +16,7 @@ class AsciiReplacerCommand(sublime_plugin.TextCommand):
 				text = text.replace('”', '"')
 				text = text.replace('% ', '&#37; ')
 				text = text.replace('…', '&#8230;')
+				text = text.replace('--', '&mdash;')
 				text = text.replace(' ', ' ')
 				text = text.replace('', '')
 				text = text.replace(' ', '')
