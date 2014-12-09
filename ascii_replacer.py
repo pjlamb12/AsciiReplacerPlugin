@@ -30,6 +30,7 @@ class AsciiReplacerCommand(sublime_plugin.TextCommand):
 				text = text.replace('ó', '&#243;')
 				text = text.replace('Ú', '&#218;')
 				text = text.replace('ú', '&#250;')
+				text = text.replace('—', '&mdash;')
 				self.view.replace(edit, line_r, text)
 		self.view.erase_status('ascii_replacer')
 		sublime.status_message('Ascii Replacer is finished running!')
